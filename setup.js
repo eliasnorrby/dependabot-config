@@ -9,7 +9,7 @@ yargs
   .usage("Usage: $0 [options]")
   .help("h")
   .alias("h", "help")
-  .strict(true);
+  .strict(true).argv;
 
 // Set up logging methods
 const log = {
@@ -38,10 +38,9 @@ if (!fs.existsSync(configDir)) {
   fs.mkdirSync(configDir);
 }
 
-process.chdir(configDir);
+const config = fs.readFileSync(path.resolve(__dirname, "config.yml"), "utf8");
 
-const configPath = path.resolve(".dependabot", "config.yml");
-const config = fs.readFileSync(path.resolve(__dirname, configPath), "utf8");
+process.chdir(configDir);
 
 // Config files to write
 const CONFIG_FILES = {

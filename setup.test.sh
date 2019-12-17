@@ -35,6 +35,8 @@ function help_test {
   npx $ORIG_DIR --help | grep "Usage"
 }
 
+setup
+
 common_test
 
 help_test
