@@ -1,21 +1,36 @@
 {
   "name": "@eliasnorrby/dependabot-config",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Package for dependabot initialization",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "index.js",
+    "setup.js",
+    ".dependabot"
+  ],
+  "bin": "setup.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tsc",
     "semantic-release": "semantic-release",
     "check-format": "prettier --list-different '**/*.{js,jsx,ts,tsx,html,vue,css,less,scss,graphql,yaml,yml,json,md,mdx}'",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,html,vue,css,less,scss,graphql,yaml,yml,json,md,mdx}'"
   },
+  "keywords": [
+    "config",
+    "dependabot"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/eliasnorrby/dependabot-config.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Elias Norrby",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eliasnorrby/dependabot-config/issues"
   },
@@ -29,12 +44,14 @@
     "prettier": "^1.19.1",
     "semantic-release": "^15.13.31"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "has-yarn": "^2.1.0",
+    "yargs": "^15.0.2"
   }
 }
