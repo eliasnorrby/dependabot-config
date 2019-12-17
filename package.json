@@ -1,6 +1,6 @@
 {
   "name": "@eliasnorrby/dependabot-config",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Package for dependabot initialization",
   "publishConfig": {
     "access": "public"
