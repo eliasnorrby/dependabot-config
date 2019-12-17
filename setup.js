@@ -11,8 +11,6 @@ yargs
   .alias("h", "help")
   .strict(true);
 
-const argv = yargs.argv;
-
 // Set up logging methods
 const log = {
   info: msg =>
@@ -24,7 +22,7 @@ const log = {
     console.log(`${chalk.bgRed.black(" ERROR ")} ${chalk.red(msg)}`),
 };
 
-const packageName = "@eliasnorrby/dependabot-config";
+// const packageName = "@eliasnorrby/dependabot-config";
 
 if (!fs.existsSync("package.json")) {
   log.error(
