@@ -31,6 +31,14 @@ function common_test {
   [ -e "$CONFIG_FILE" ]
 }
 
+function force_test {
+  CONFIG_FILE=".dependabot/config.yml"
+  STRING="overwrite me"
+  echo "$STRING" > "$CONFIG_FILE"
+  npx $ORIG_DIR -f
+  grep "$STRING" "$CONFIG_FILE" && return 1 || echo "OK!"
+}
+
 function help_test {
   npx $ORIG_DIR --help | grep "Usage"
 }
@@ -38,5 +46,7 @@ function help_test {
 setup
 
 common_test
+
+force_test
 
 help_test
