@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/eliasnorrby/dependabot-config/compare/v1.0.0...v1.1.0) (2019-12-18)
+
+
+### Features
+
+* add --force flag ([17236da](https://github.com/eliasnorrby/dependabot-config/commit/17236da784f8cc948ec0e4f4ba8503a27cdb6823))
+
 # 1.0.0 (2019-12-17)
 
 
