@@ -19,7 +19,7 @@ npx @eliasnorrby/dependabot-config
 ```
 
 This will run a setup script, writing to `.dependabot/config.yml`. Existing
-files will not be overwritten.
+files will not be overwritten unless you specify the `--force` flag.
 
 [travis-badge]: https://img.shields.io/travis/com/eliasnorrby/dependabot-config?style=for-the-badge
 [travis-link]: https://travis-ci.com/eliasnorrby/dependabot-config
