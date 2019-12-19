@@ -59,4 +59,4 @@ Object.entries(CONFIG_FILES).forEach(([fileName, contents]) => {
   }
 });
 
-log.info("Done!");
+log.ok("Done!");
