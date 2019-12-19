@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/eliasnorrby/dependabot-config/compare/v1.2.0...v1.2.1) (2019-12-19)
+
+
+### Bug Fixes
+
+* exit consistently (use log.ok) ([6753d0c](https://github.com/eliasnorrby/dependabot-config/commit/6753d0c42afe50af2b48270846b5955fcf1677d3))
+
 # [1.2.0](https://github.com/eliasnorrby/dependabot-config/compare/v1.1.0...v1.2.0) (2019-12-19)
 
 
