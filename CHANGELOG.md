@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/eliasnorrby/dependabot-config/compare/v1.1.0...v1.2.0) (2019-12-19)
+
+
+### Features
+
+* use @eliasnorrby/log-util during setup ([e89e82d](https://github.com/eliasnorrby/dependabot-config/commit/e89e82d8a16a1a1e47637c7100c864134a3d487d))
+
 # [1.1.0](https://github.com/eliasnorrby/dependabot-config/compare/v1.0.0...v1.1.0) (2019-12-18)
 
 
