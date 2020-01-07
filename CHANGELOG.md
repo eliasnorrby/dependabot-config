@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/eliasnorrby/dependabot-config/compare/v1.2.1...v1.2.2) (2020-01-07)
+
+
+### Bug Fixes
+
+* **deps:** bump yargs from 15.0.2 to 15.1.0 ([bb5ad59](https://github.com/eliasnorrby/dependabot-config/commit/bb5ad5904c0b1a6b0787bed80e092c693dd502ca))
+
 ## [1.2.1](https://github.com/eliasnorrby/dependabot-config/compare/v1.2.0...v1.2.1) (2019-12-19)
 
 
