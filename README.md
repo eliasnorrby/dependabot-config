@@ -21,6 +21,11 @@ npx @eliasnorrby/dependabot-config
 This will run a setup script, writing to `.dependabot/config.yml`. Existing
 files will not be overwritten unless you pass the `--force` flag.
 
+## Adding a reviewer
+
+Pass the `-r` (`--reviewer`) flag with an optional argument to specify a default
+reviewer for dependabot pull requests (defaults to `eliasnorrby`).
+
 [travis-badge]: https://img.shields.io/travis/com/eliasnorrby/dependabot-config?style=for-the-badge
 [travis-link]: https://travis-ci.com/eliasnorrby/dependabot-config
 [npm-badge]: https://img.shields.io/npm/v/@eliasnorrby/dependabot-config?style=for-the-badge
