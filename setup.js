@@ -14,6 +14,12 @@ yargs
     alias: "force",
     default: false,
   })
+  .option("r", {
+    describe: "Add a PR reviewer",
+    type: "string",
+    alias: "reviewer",
+    default: "eliasnorrby",
+  })
   .help("h")
   .alias("h", "help")
   .strict(true);
@@ -37,6 +43,11 @@ if (!fs.existsSync(configDir)) {
 
 const config = fs.readFileSync(path.resolve(__dirname, "config.yml"), "utf8");
 
+const reviewer = `\
+    default_reviewers:
+      - "${argv.reviewer}"
+`;
+
 process.chdir(configDir);
 
 // Config files to write
@@ -50,9 +61,20 @@ Object.entries(CONFIG_FILES).forEach(([fileName, contents]) => {
   if (!fs.existsSync(fileName)) {
     log.info(`Writing ${fileName}`);
     fs.writeFileSync(fileName, contents, "utf8");
+
+    if (argv.reviewer) {
+      log.info("Appending reviewer");
+      fs.appendFileSync(fileName, reviewer, "utf8");
+    }
   } else if (argv.force) {
     log.warn(`Overwriting ${fileName}`);
     fs.writeFileSync(fileName, contents, "utf8");
+
+    // FIXME: code duplication
+    if (argv.reviewer) {
+      log.info("Appending reviewer");
+      fs.appendFileSync(fileName, reviewer, "utf8");
+    }
   } else {
     log.skip(`${fileName} already exists`);
     failedToWrite[fileName] = true;
