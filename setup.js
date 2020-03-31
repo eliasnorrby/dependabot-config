@@ -1,84 +1,84 @@
 #!/usr/bin/env node
-const path = require("path");
-const fs = require("fs");
-const yargs = require("yargs");
+const path = require('path')
+const fs = require('fs')
+const yargs = require('yargs')
 
-const { log } = require("@eliasnorrby/log-util");
+const { log } = require('@eliasnorrby/log-util')
 
 yargs
-  .alias("v", "version")
-  .usage("Usage: $0 [options]")
-  .option("f", {
-    describe: "Overwrite existing files",
-    type: "boolean",
-    alias: "force",
+  .alias('v', 'version')
+  .usage('Usage: $0 [options]')
+  .option('f', {
+    describe: 'Overwrite existing files',
+    type: 'boolean',
+    alias: 'force',
     default: false,
   })
-  .option("r", {
-    describe: "Add a PR reviewer",
-    type: "string",
-    alias: "reviewer",
-    default: "eliasnorrby",
+  .option('r', {
+    describe: 'Add a PR reviewer',
+    type: 'string',
+    alias: 'reviewer',
+    default: 'eliasnorrby',
   })
-  .help("h")
-  .alias("h", "help")
-  .strict(true);
-const argv = yargs.argv;
+  .help('h')
+  .alias('h', 'help')
+  .strict(true)
+const argv = yargs.argv
 
 // const packageName = "@eliasnorrby/dependabot-config";
 
-if (!fs.existsSync("package.json")) {
+if (!fs.existsSync('package.json')) {
   log.fail(
-    "No package.json found in the current directory. Make sure you are in the project root. If no package.json exists yet, run `npm init` first.",
-  );
-  process.exit(1);
+    'No package.json found in the current directory. Make sure you are in the project root. If no package.json exists yet, run `npm init` first.'
+  )
+  process.exit(1)
 }
 
-const configDir = ".dependabot";
+const configDir = '.dependabot'
 
 if (!fs.existsSync(configDir)) {
-  log.info(`Creating ${configDir} directory`);
-  fs.mkdirSync(configDir);
+  log.info(`Creating ${configDir} directory`)
+  fs.mkdirSync(configDir)
 }
 
-const config = fs.readFileSync(path.resolve(__dirname, "config.yml"), "utf8");
+const config = fs.readFileSync(path.resolve(__dirname, 'config.yml'), 'utf8')
 
 const reviewer = `\
     default_reviewers:
       - "${argv.reviewer}"
-`;
+`
 
-process.chdir(configDir);
+process.chdir(configDir)
 
 // Config files to write
 const CONFIG_FILES = {
-  "config.yml": config,
-};
+  'config.yml': config,
+}
 
-const failedToWrite = {};
+const failedToWrite = {}
 
 Object.entries(CONFIG_FILES).forEach(([fileName, contents]) => {
   if (!fs.existsSync(fileName)) {
-    log.info(`Writing ${fileName}`);
-    fs.writeFileSync(fileName, contents, "utf8");
+    log.info(`Writing ${fileName}`)
+    fs.writeFileSync(fileName, contents, 'utf8')
 
     if (argv.reviewer) {
-      log.info("Appending reviewer");
-      fs.appendFileSync(fileName, reviewer, "utf8");
+      log.info('Appending reviewer')
+      fs.appendFileSync(fileName, reviewer, 'utf8')
     }
   } else if (argv.force) {
-    log.warn(`Overwriting ${fileName}`);
-    fs.writeFileSync(fileName, contents, "utf8");
+    log.warn(`Overwriting ${fileName}`)
+    fs.writeFileSync(fileName, contents, 'utf8')
 
     // FIXME: code duplication
     if (argv.reviewer) {
-      log.info("Appending reviewer");
-      fs.appendFileSync(fileName, reviewer, "utf8");
+      log.info('Appending reviewer')
+      fs.appendFileSync(fileName, reviewer, 'utf8')
     }
   } else {
-    log.skip(`${fileName} already exists`);
-    failedToWrite[fileName] = true;
+    log.skip(`${fileName} already exists`)
+    failedToWrite[fileName] = true
   }
-});
+})
 
-log.ok("Done!");
+log.ok('Done!')
