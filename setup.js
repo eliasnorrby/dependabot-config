@@ -45,7 +45,7 @@ const config = fs.readFileSync(path.resolve(__dirname, 'config.yml'), 'utf8')
 
 const reviewer = `\
     default_reviewers:
-      - "${argv.reviewer}"
+      - '${argv.reviewer}'
 `
 
 process.chdir(configDir)
