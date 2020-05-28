@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.4...v1.3.5) (2020-05-28)
+
+
+### Bug Fixes
+
+* use single quotes for reviewer ([fc7c756](https://github.com/eliasnorrby/dependabot-config/commit/fc7c756496b73d47f3acc1e5562c229464f2a7de))
+
 ## [1.3.4](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.3...v1.3.4) (2020-04-08)
 
 
