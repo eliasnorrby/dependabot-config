@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.6...v1.3.7) (2020-07-07)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump npm from 6.14.5 to 6.14.6 ([03ec215](https://github.com/eliasnorrby/dependabot-config/commit/03ec215a3d2819391803fc11c379db9428ffd97a))
+
 ## [1.3.6](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.5...v1.3.6) (2020-06-11)
 
 
