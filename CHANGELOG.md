@@ -1,3 +1,10 @@
+## [1.3.11](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.10...v1.3.11) (2020-09-10)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump node-fetch from 2.6.0 to 2.6.1 ([1fa299a](https://github.com/eliasnorrby/dependabot-config/commit/1fa299ad7639d870bcb9ce591165c8c191b6dffe))
+
 ## [1.3.10](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.9...v1.3.10) (2020-07-21)
 
 
