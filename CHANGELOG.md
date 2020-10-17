@@ -1,3 +1,11 @@
+## [1.3.14](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.13...v1.3.14) (2020-10-17)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump lodash from 4.17.15 to 4.17.20 ([49453fc](https://github.com/eliasnorrby/dependabot-config/commit/49453fcda4d5f25b728dec5ceabbfa7f440684cb))
+* **deps:** [security] bump npm-user-validate from 1.0.0 to 1.0.1 ([69445e8](https://github.com/eliasnorrby/dependabot-config/commit/69445e824c3f488d54e1872acc1c3dc6f8bf7412))
+
 ## [1.3.13](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.12...v1.3.13) (2020-10-01)
 
 
