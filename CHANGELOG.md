@@ -1,3 +1,10 @@
+## [1.3.17](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.16...v1.3.17) (2020-10-30)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump npm-user-validate from 1.0.0 to 1.0.1 ([4d4028f](https://github.com/eliasnorrby/dependabot-config/commit/4d4028f2b72b34d069645846932e3a437502d352))
+
 ## [1.3.16](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.15...v1.3.16) (2020-10-23)
 
 
