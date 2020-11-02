@@ -1,3 +1,10 @@
+## [1.3.18](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.17...v1.3.18) (2020-11-02)
+
+
+### Bug Fixes
+
+* **deps:** bump @eliasnorrby/log-util from 1.1.6 to 1.1.7 ([ba5bc9d](https://github.com/eliasnorrby/dependabot-config/commit/ba5bc9d9d25fc3599d823f30e14f3bc97c18663d))
+
 ## [1.3.17](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.16...v1.3.17) (2020-10-30)
 
 
