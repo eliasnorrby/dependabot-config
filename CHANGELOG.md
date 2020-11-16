@@ -1,3 +1,10 @@
+## [1.3.19](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.18...v1.3.19) (2020-11-16)
+
+
+### Bug Fixes
+
+* **deps:** bump yargs from 16.1.0 to 16.1.1 ([0cbb789](https://github.com/eliasnorrby/dependabot-config/commit/0cbb789cd1fd0860df35e6674bd48e014145350a))
+
 ## [1.3.18](https://github.com/eliasnorrby/dependabot-config/compare/v1.3.17...v1.3.18) (2020-11-02)
 
 
